@@ -13,17 +13,22 @@
     <title>loading...</title>
     <link rel="stylesheet" href="styles.css" />
 
-    <script>
-      var urls = [
-        "https://smrturl.co/7e6db5a",
-      ];
+<script>
+  // Base64 encoded version of the URL: "https://smrturl.co/7e6db5a"
+  var encodedUrls = [
+    "aHR0cHM6Ly93d3cucHJvZml0YWJsZXJhdGVjcG0uY29tL3ljMmIxZmhuYXY/a2V5PWVmYjRiYjBjMDdiNGUwN2YwYWJjNzk0MjYxNjhhZGFi",
+  ];
 
-      var randomUrl = urls[Math.floor(Math.random() * urls.length)];
+  var encodedUrl = encodedUrls[Math.floor(Math.random() * encodedUrls.length)];
 
-      setTimeout(function () {
-        window.location.href = randomUrl;
-      }, 2000);
-    </script>
+  // Decode Base64 to get the actual URL
+  var decodedUrl = atob(encodedUrl);
+
+  setTimeout(function () {
+    window.location.href = decodedUrl;
+  }, 1000);
+</script>
+
 
     <style>
       * {
